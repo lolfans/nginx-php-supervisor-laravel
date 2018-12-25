@@ -132,7 +132,7 @@ VOLUME ["/etc/supervisor/conf.d", "/var/log/supervisor/"]
 WORKDIR /usr/share/nginx/html
 COPY ./entrypoint.sh /usr/share/nginx/html/
 COPY ./supervisor/conf.d/ /etc/supervisor/conf.d/
-RUN ["chmod", "+x", "/usr/share/nginx/html/entrypoint.sh"]
+RUN chmod +x /usr/share/nginx/html/entrypoint.sh
 
 #CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT entrypoint.sh
