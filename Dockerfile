@@ -2,8 +2,8 @@ FROM registry.cn-qingdao.aliyuncs.com/liudashuai/nginx
 
 # Mirror mirror switch to Ali-OSM (Alibaba Open Source Mirror Site) - http://mirrors.aliyun.com/
 RUN echo 'http://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/repositories \
-	&& echo 'http://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
-	&& echo 'http://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
+	&& echo '@community http://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
+	&& echo '@testing http://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
 
 # https://github.com/matriphe/docker-alpine-php/blob/master/7.0/FPM/Dockerfile
 # Environments
