@@ -129,8 +129,9 @@ RUN apk update \
 VOLUME ["/etc/supervisor/conf.d", "/var/log/supervisor/"]
 
 # Define working directory.
-WORKDIR /etc/supervisor/conf.d
-COPY ./supervisor/conf.d /etc/supervisor/conf.d
+WORKDIR /usr/share/nginx/html
+COPY ./entrypoint.sh /usr/share/nginx/html/
+COPY ./supervisor/conf.d /etc/supervisor/conf.d/
 
 #CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/conf.d/supervisord.conf"]
 ENTRYPOINT ["./entrypoint.sh"]
