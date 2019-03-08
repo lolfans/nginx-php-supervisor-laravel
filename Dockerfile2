@@ -14,7 +14,7 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/
 COPY ./nginx/nginx.conf /etc/nginx/
 # Expose volumes
 
-VOLUME ["/usr/share/nginx/html", "/usr/local/var/log/php7", "/var/run/"
+VOLUME ["/usr/share/nginx/html", "/usr/local/var/log/php7", "/var/run/"]
 WORKDIR /usr/share/nginx/html
 
 
