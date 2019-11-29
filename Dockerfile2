@@ -1,3 +1,4 @@
+#该文件是因为老项目改造，PHP版本问题，所特制的dockerfile，新项目不必用此文件构建基础环境镜像
 FROM bravist/php-fpm-alpine-aliyun-app:1.16
 
 RUN apk add nginx
